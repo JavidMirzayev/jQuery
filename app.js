@@ -1,7 +1,6 @@
 "use strict";
 $(document).ready(function () {
 
-});
 
 
 
@@ -21,24 +20,90 @@ $(document).ready(function () {
 
 
 
-$('h2').click(function (e) {
-    e.preventDefault();
-    $('h2').html(1234);
-});
 
 
-$('.btn').click(function (e) {
-    e.preventDefault();
 
-    let s = (s) => {
-        for (let i = 1; i < s; i) {
-            $('.col-md-12').append(`<h1>${i}<h1>`);
+
+
+
+
+    
+
+
+
+    $("button").click(() => {
+        // inputun dəyərin al
+        let inputValue = $("input").val();
+        // numeric dəyərə çevir
+        let numericValue = Number(inputValue);
+
+        if (inputValue == "") {
+            alert("Zəhmət olmasa boş buraxmayın!");
+        } else if (!numericValue) {
+            // əgər daxil edilmiş dəyər Number deyilsə, onu String kimi əlavə et
+            let stringTodos = $("<h2>").text(inputValue);
+            $(".list").append(stringTodos);
+
+        } else if (numericValue) {
+            // əgər daxil edilən dəyər ədəddirsə, onu ədəd qədər təkrar-təkrar əlavə et
+            for (let i = 0; i < numericValue; i++) {
+                let numericTodos = $("<h2>").text(numericValue);
+                $(".list").append(numericTodos);
+            }
         }
-    }
-    s()
+        // son olaraq inputun için təmizlə
+        $("input").val("");
+
+    });
+
 });
 
-console.log($('input').val())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
