@@ -27,37 +27,29 @@ $(document).ready(function () {
 
 
 
-    
+
+
 
 
 
     $("button").click(() => {
-        // inputun dəyərin al
         let inputValue = $("input").val();
-        // numeric dəyərə çevir
         let numericValue = Number(inputValue);
+        
+        inputValue == "" ? console.log("Zəhmət olmasa boş buraxmayın!") : !numericValue
+            ? $(".list").append($("<h2>").text(inputValue)) : numericValue && appendNumericTodos(numericValue);
 
-        if (inputValue == "") {
-            alert("Zəhmət olmasa boş buraxmayın!");
-        } else if (!numericValue) {
-            // əgər daxil edilmiş dəyər Number deyilsə, onu String kimi əlavə et
-            let stringTodos = $("<h2>").text(inputValue);
-            $(".list").append(stringTodos);
+        $("input").val("");
 
-        } else if (numericValue) {
-            // əgər daxil edilən dəyər ədəddirsə, onu ədəd qədər təkrar-təkrar əlavə et
-            for (let i = 0; i < numericValue; i++) {
-                let numericTodos = $("<h2>").text(numericValue);
+        function appendNumericTodos(value) {
+            for (let i = 0; i < value; i++) {
+                let numericTodos = $("<h2>").text(value);
                 $(".list").append(numericTodos);
             }
         }
-        // son olaraq inputun için təmizlə
-        $("input").val("");
-
     });
 
 });
-
 
 
 
