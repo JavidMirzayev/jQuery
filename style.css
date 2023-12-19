@@ -21,7 +21,7 @@ a:hover {
 #webflow .box input {
   border-radius: 15px;
   width: 170px;
-  padding: 13px 0;
+  padding: 12px 0;
   margin: 20px 0;
 }
 #webflow .box h1 {
@@ -32,4 +32,14 @@ a:hover {
   background: white;
   border-radius: 20px;
   padding: 5px 20px;
+}
+#webflow .textlist {
+  margin-top: 30px;
+}
+#webflow .textlist h3 {
+  border: 1px solid #102ca8;
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 160px;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */
