@@ -16,7 +16,7 @@ a:hover {
   border-radius: 20px;
   width: 220px;
   padding: 20px 25px;
-  background: #a4caff;
+  background: linear-gradient(0deg, rgb(34, 193, 195) 0%, rgb(253, 187, 45) 100%);
 }
 #webflow .box input {
   border-radius: 15px;
@@ -36,7 +36,7 @@ a:hover {
 #webflow .list {
   margin-top: 30px;
 }
-#webflow .list h2 {
+#webflow .list h3 {
   border: 1px solid #102ca8;
   padding: 10px 0;
   margin: 10px 0;

@@ -2,56 +2,22 @@
 $(document).ready(function () {
 
 
-  
+
 
 
 
 
     $('.btn').click(function (e) {
         e.preventDefault();
-
-        function myel(myclass = "") {
-            let inputVal = $.trim($("#inputme").val());
-
-            if (inputVal !== '') {
-                let newDiv = $('<h2></h2>');
-                let bigDiv = $(`<div ${myclass}></div>`);
-
-                if (!isNaN(inputVal)) {
-                    for (let i = 0; i < parseInt(inputVal); i++) {
-                        $(newDiv).clone().append(inputVal).appendTo(bigDiv);
-                    }
-                } else {
-                    $(newDiv).append(inputVal);
-                    $(bigDiv).append(newDiv);
-                }
-
-                return bigDiv;
-            }
+        if (!$.trim($('input').val()) == '') {
+            let a = b => {
+                for (let i = 0; i < b; i++) { $('.list').append(`<h3>${b}</h3>`); }
+            };
+            let v = f => Number(f) ? a(f) : $('.list').append(`<h3>${f}</h3>`);
+            v($('input').val());
         }
 
-        $("#listme").append(myel());
     })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
