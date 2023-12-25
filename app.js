@@ -15,7 +15,9 @@ $(document).ready(function () {
             };
             let v = f => Number(f) ? a(f) : $('.list').append(`<h3>${f}</h3>`);
             v($('input').val());
+
         }
+        $('input').val('');
 
     })
 
